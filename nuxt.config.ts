@@ -14,4 +14,8 @@ export default defineNuxtConfig({
   plugins: [
     './plugins/vue-toast-notification.client.ts'
   ],
+  runtimeConfig: {
+    AUTH_EMAIL: process.env.AUTH_EMAIL,
+    AUTH_PASSWORD: process.env.AUTH_PASSWORD,
+  }
 })
