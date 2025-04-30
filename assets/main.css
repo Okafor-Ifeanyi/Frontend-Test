@@ -66,3 +66,8 @@
   .home-color {
     color: #382F90;
   }
+
+  .active-dash-button {
+    background-color: #2A36A4 !important;
+    color: white !important;
+  }

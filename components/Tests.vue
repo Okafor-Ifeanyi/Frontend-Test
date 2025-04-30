@@ -32,7 +32,6 @@
     })
     
     const notify = async () => {
-        console.log(user_input.value.investigations)
         await useCreateMedicalRecord(token.value, user_input.value)
         toast.success("Medical Record Created", {
             position: 'top-right',
@@ -98,7 +97,7 @@
             </div>
             <div class="w-100 d-flex justify-content-end">
                 <button @click="notify" 
-                    class="btn btn-primary btn-lg align-item-end mt-5 fs-6">
+                    class="btn btn-primary btn-lg align-item-end mt-5 fs-6 active-dash-button">
                     Save and Send
                 </button>
             </div>
