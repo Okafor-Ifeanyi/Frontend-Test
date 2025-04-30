@@ -1,0 +1,68 @@
+.bg-soft-purple {
+    background-color: #F5F5FB;
+}
+#__nuxt {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .full-height {
+    height: 100vh;
+  }
+
+  .mt-60 {
+    margin-top: 60px;
+  }
+  
+  .text-size {
+    font-size: 12px;
+  }
+  .text-color {
+    color: #A0A0A0;
+    border-color: #A0A0A0;
+  }
+
+  .border-color {
+    border-color: #A0A0A0;
+  }
+
+  .btn-hover-custom:hover {
+    background-color: #2A36A4 !important;
+    color: white !important;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .w-90 {
+    width: 90%;
+  }
+
+  .w-80 {
+    width: 80%;
+  }
+
+  .w-70 {
+    width: 70%;
+  }
+
+  .w-60 {
+    width: 60%;
+  }
+
+  .w-40 {
+    width: 40%;
+  }
+
+  .w-30 {
+    width: 30%;
+  }
+
+  .home-color {
+    color: #382F90;
+  }
