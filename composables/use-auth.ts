@@ -11,34 +11,38 @@ type Response = {
     message: string
 }
 
-export default async function useAuth(email: string, password: string) {
-    if(!email || !password) {
-        return {
-            data: null,
-            error: {
-                statusCode: 401,
-                statusMessage: 'No recipient or body provided',
-            }
-        }
-    }
+type UseAuthReturn = {
+    data: Ref<string | null>
+    error: Ref<Error | null>
+}
+
+
+export default async function useAuth(email: string, password: string): Promise<UseAuthReturn> {
+    let data = ref<string | null>(null)
+    let error = ref<Error | null>(null)
+    
     try {
-        const data = await $fetch<Response>('https://testdrive.kompletecare.com/api/login', 
+        if(!email || !password) {
+            throw new Error('Email and password are required.')
+        }
+        
+        const res = await $fetch<Response>('https://testdrive.kompletecare.com/api/login', 
             { method: 'POST', body: { email, password } } 
         )
+        if (!res.success) {
+            throw new Error(res.message)
+        }
 
-        localStorage.setItem('token', data.data.token)
-        return  {
-            data: data.data.token,
-            error: null
+        data.value = res.data.token
+        return {
+            data,
+            error
         }
     } catch (err) {
+        error.value = err as Error
         return {
-            data: null,
-            error: {
-                statusCode: 500,
-                statusMessage: (err as Error).message,
-            }
+            data,
+            error
         }
     }
 }
-

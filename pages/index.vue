@@ -1,16 +1,3 @@
-<script setup lang="ts">
-    import useAuth from "../composables/use-auth"    
-    import useGetTest from "../composables/use-gettest"
-
-    const { data, error } = await useAuth("tester@kompletecare.com", "password")
-
-    if( error) {
-        console.log("Error: ", error)
-    } 
-
-    const { data: userData, error: userError } = await useGetTest(data)
-</script>
-
 <template>
     <div class="container-fluid full-height">
       <div class="row h-100">
@@ -119,48 +106,10 @@
                 </div>
 
           </div>
-          
-          <div class="w-90 d-flex flex-column px-5 py-4 bg-white">
-            <div>
-                <h1 class="fs-5 home-color">x-ray</h1>
-                <div v-if="userData.data" class="d-flex flex-row flex-wrap">
-                    
-                    <CheckBox
-                        v-for="(item) in userData.data"
-                        id="subscribe"
-                        label="Thoraco Lumbar Vertebrae"
-                        v-model=True
-                    />
+        
 
-                    <CheckBox
-                        id="subscribe"
-                        label="chest"
-                        v-model=True
-                    />
+          <Tests />
 
-                    <CheckBox
-                        id="subscribe"
-                        label="chest"
-                        v-model=True
-                    />
-
-                    <CheckBox
-                        id="subscribe"
-                        label="chest"
-                        v-model=True
-                    />
-
-                    <CheckBox
-                        id="subscribe"
-                        label="chest"
-                        v-model=True
-                    />
-
-                </div>
-            </div>
-            <div></div>
-            <div></div>
-          </div>
         </main>
       </div>
     </div>

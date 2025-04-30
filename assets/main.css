@@ -20,6 +20,10 @@
     color: #A0A0A0;
     border-color: #A0A0A0;
   }
+  
+  .border-color {
+    border-color: #A0A0A0;
+  }
 
   .btn-hover-custom:hover {
     background-color: #2A36A4 !important;
