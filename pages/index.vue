@@ -102,7 +102,7 @@
             <div class="w-100 d-flex flex-row justify-content-between my-1">
                 <div class="w-60 d-flex flex-column">
                     <h1 class="fs-3 home-color">Update Patient Medical Record</h1>
-                    <p class="fw-light fs-6 text-color">Click the tabs to view and edit patient medical details</p>
+                    <p class="fw-light text-size text-color">Click the tabs to view and edit patient medical details</p>
                 </div>
 
           </div>

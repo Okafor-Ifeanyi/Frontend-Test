@@ -15,12 +15,14 @@
     margin-top: 60px;
   }
   
-
+  .text-size {
+    font-size: 12px;
+  }
   .text-color {
     color: #A0A0A0;
     border-color: #A0A0A0;
   }
-  
+
   .border-color {
     border-color: #A0A0A0;
   }

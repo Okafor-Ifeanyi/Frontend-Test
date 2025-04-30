@@ -1,5 +1,5 @@
 <template>
-    <div class="form-check w-25 mb-1 ">
+    <div class="form-check w-25 mb-2 text-size">
       <input
         class="form-check-input"
         type="checkbox"

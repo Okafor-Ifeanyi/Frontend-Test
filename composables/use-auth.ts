@@ -3,7 +3,7 @@ type User = {
     password: string
 }
 
-type Response = {
+type ApiResponse = {
     success: boolean
     data: {
         token: string
@@ -25,15 +25,21 @@ export default async function useAuth(email: string, password: string): Promise<
         if(!email || !password) {
             throw new Error('Email and password are required.')
         }
-        
-        const res = await $fetch<Response>('https://testdrive.kompletecare.com/api/login', 
-            { method: 'POST', body: { email, password } } 
+
+        const { data: apiData, error: apiError } = await useFetch<ApiResponse>(
+            'https://testdrive.kompletecare.com/api/login',
+            { method: 'POST', body: { email, password } }
         )
-        if (!res.success) {
-            throw new Error(res.message)
+
+        if (apiError.value) {
+            throw new Error(apiError.value.message || apiError.value.statusMessage)
+        }
+        if (!apiData.value?.success) {
+            throw new Error(apiData.value?.message)
         }
 
-        data.value = res.data.token
+        data.value = apiData.value?.data.token
+        
         return {
             data,
             error
