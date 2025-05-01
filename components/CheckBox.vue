@@ -10,7 +10,7 @@ const modelValue = defineModel<string>()
 </script>
 
 <template>
-  <div class="form-check w-25 mb-2 text-size">
+  <div class="form-check col-6 col-md-3 mb-2 text-size">
     <input
       class="form-check-input"
       :name="name"
