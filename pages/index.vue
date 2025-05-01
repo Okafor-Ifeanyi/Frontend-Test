@@ -1,16 +1,16 @@
 <template>
     <div class="container-fluid full-height">
       <div class="row h-100">
-        <aside class="col-md-3 d-flex flex-column g-0 text-color">
+        <aside class="d-none d-md-flex col-md-3 d-flex flex-column g-0 text-color">
             <Sidebar />
         </aside>
   
         <main class="col-md-9 bg-soft-purple d-flex flex-column p-4">
             <div class="w-100 d-flex flex-row justify-content-between home-color">
 
-                <div class="w-70 d-flex"></div>
+                <div class="w-30 w-md-70 d-flex"></div>
 
-                <div class="d-flex flex-row justify-content-between w-30 align-items-center align-bottom" style="height: 40px;">
+                <div class="d-flex flex-row justify-content-between col-8 col-md-4 align-items-center align-bottom" style="height: 40px;">
                     <p class="m-0">Take a tour</p>
                     <div class="d-flex flex-row position-relative">
                         <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -25,9 +25,9 @@
                 </div>
             </div>
         
-            <div class="w-100 d-flex flex-row justify-content-between my-1">
-                <div class="w-60 d-flex flex-column">
-                    <h1 class="fs-3 home-color">Update Patient Medical Record</h1>
+            <div class="w-100 d-flex flex-row justify-content-between my-4 my-md-1">
+                <div class="w-80 col-md-9 d-flex flex-column">
+                    <h1 class="fs-4 home-color">Update Patient Medical Record</h1>
                     <p class="fw-light text-size text-color">Click the tabs to view and edit patient medical details</p>
                 </div>
 

@@ -43,7 +43,7 @@
 </script>
 
 <template>
-    <div class="w-90 d-flex flex-column px-5 py-4 bg-white text-size">
+    <div class="col-12 col-md-10 d-flex flex-column px-3 py-2 px-md-5 py-md-4 bg-white text-size">
             <div class="mb-4 pb-2 border-bottom border-color">
                 <h1 class="fs-6 home-color">X-Ray</h1>
                 <div v-if="x_ray" class="d-flex flex-row flex-wrap">
